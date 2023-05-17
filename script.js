@@ -7,9 +7,6 @@ const header = document.querySelector('header');
             }
           });
 
-
-
-          
           const navBar = document.querySelector("header"),
           menuBtns = document.querySelectorAll(".menu-icon");
        
