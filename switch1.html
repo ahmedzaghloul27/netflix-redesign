@@ -1,95 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <title>Netflix - switch profile</title>
+  <style>
+    body {
+      background-color: #141414;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    
+    .logo {
+      width: 100px;
+    }
+    
+    .manage-button {
+      padding: 10px 20px;
+      background-color: red;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .user-grid {
+      margin-left: 300px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 30px;
+    }
+    
+    .user-card {
+      margin-right: 5px;
+      width: 100px;
+      height: 100px;
+      background-color: #333333;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      position: relative;
+    }
+    
+    .user-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px 5px 0 0;
+      cursor: pointer;
+    }
+    
+    .user-card h2 {
+      margin: 10px 0;
+      font-size: 12px;
+      font-weight: bold;
+      text-align: center;
+    }
+    
+    .add-profile {
+      margin-left: 30px;
+      margin-top: 10px;
+      width: 50px;
+      height: 50px;
+      background-color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: white;
+      margin-bottom: 10px;
+    }
+    .add-profile span {
+      font-size: 40px;
+    }
+    .add-profile a{
+      text-decoration: none;
+    }
+    
+    .add-profile-text {
+      margin-left: 640px;
+      margin-top: -20px;
+      font-size: 20px;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+    }
+    .edit-logo {
+  margin-left: 1010px;
+  font-size: 30px;
+  margin-right: 10px;
+  color: white;
+}
+
+  </style>
 </head>
 <body>
-    <div class="content">
-        dgdgddg
+  <div class="container">
+    <div class="header">
+      <img class="logo" src="./imgs/netflix_logo.png" alt="Netflix Logo">
+      <div class="edit-logo">&#9998;</div>
+      <button class="manage-button" onclick="window.location.href = 'switch2.html';">Manage</button>
+    </div>
+    
+  <div class="container">
+    <h1>Who's Watching Now?</h1>
+    
+    <div class="user-grid">
+      <div class="user-card">
+        <a href="#">
+          <img src="./imgs/oss.jpg" alt="User 1">
+        </a>
+        <h2>Mohammed</h2>
       </div>
-      
-      <nav class="navbar">
-        <pre>
-            ggg
-            gggg
-            gg
-        </pre>
-      </nav>
-      <pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </pre>
-    <script>
-        const navbar = document.querySelector('.navbar');
-const content = document.querySelector('.content');
-
-window.addEventListener('scroll', function() {
-  if (window.pageYOffset > content.offsetTop + content.offsetHeight) {
-    navbar.classList.add('navbar-fixed');
-  } else {
-    navbar.classList.remove('navbar-fixed');
-  }
-});
-    </script>
+      <div class="user-card">
+        <a href="#">
+          <img src="./imgs/zaghlol.jpg" alt="User 2">
+        </a>
+        <h2>Ahmed</h2>
+      </div>
+      <div class="user-card">
+        <a href="#">
+          <img src="./imgs/gasser.jpg" alt="User 3">
+        </a>
+        <h2>Gasser</h2>
+      </div>
+      <div class="user-card">
+        <a href="#">
+          <img src="./imgs/ziad.jpg" alt="User 4">
+        </a>
+        <h2>Ziad</h2>
+      </div>
+      <div class="add-profile">
+        <a href="#">
+          <span>+</span>
+        </a>
+      </div>
+    </div>
+    <div class="add-profile-text">Add Profile</div>
+  </div>
 </body>
 </html>
