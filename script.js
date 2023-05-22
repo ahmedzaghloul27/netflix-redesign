@@ -56,4 +56,17 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+function onlyOne(check) {
+  var checkbox = document.getElementsByName('check')
+  checkbox.forEach((item) => {
+    if (item !== check) item.checked = false
+  })
+}
+
+function onlyOneit(check) {
+  var checkitbox = document.getElementsByName('checkit')
+  checkitbox.forEach((item) => {
+    if (item !== check) item.checked = false
+  })
+}
 

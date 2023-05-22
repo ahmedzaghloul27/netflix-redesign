@@ -16,13 +16,17 @@
   display: none;
 }
 
+header a#switch-user{
+  color: white;
+}
+
 body {
   background-color: rgb(20, 20, 20);
   color: rgb(253, 253, 253);
   font-size: 28px;
 }
 
-/* --------------------header------------------------ */
+/*--------------------header--------------------*/
 header {
   justify-content: space-between;
   position: fixed;
@@ -76,12 +80,13 @@ header .logo img {
   cursor: pointer;
 }
 .form-container {
-  max-width: 400px;
+  width: 450px;
   margin: 0 auto;
   text-align: center;
-  background-color: #000;
+  background-color: #000000cf;
   padding: 40px;
-  border-radius: 50px 50px 0px 0px;
+  height: 510px;
+  border-radius: 15px 15px 0px 0px;
 }
 
 
@@ -90,10 +95,11 @@ header .logo img {
   font-weight: bold;
   margin-bottom: 20px;
   color: #fff;
+  bottom: 0;
 }
 
 
-label {
+.form-container label{
   display: block;
   text-align: left;
   font-size: 0.9em;
@@ -108,21 +114,26 @@ input[type="password"] {
   padding: 10px;
   margin-top: 5px;
   border: none;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 4px solid #ff000000;
   font-size: 1em;
-  background-color: #f7f7f7;
+  border-radius: 6px;
+  background-color: #464646;
   transition: border-color 0.3s ease;
   color: #333;
+  margin-bottom: 20px;
 }
 
 input[type="email"]:focus,
 input[type="password"]:focus {
   outline: none;
-  border-color: #007bff;
+  background-color: #e4e4e4;
+  border-color: #cb0000;
 }
 
 
-button[type="submit"] {
+
+button[type="submit"],
+button a{
   width: 100%;
   padding: 12px;
   margin-top: 20px;
@@ -131,6 +142,7 @@ button[type="submit"] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  text-decoration: none;
   font-size: 1em;
   transition: background-color 0.3s ease;
   margin-bottom: 20px;
@@ -138,11 +150,11 @@ button[type="submit"] {
 
 
 
-.forgot-password a {
-margin-top: 70px;
+.forgot-password a{
+  margin-top: 70px;
   color: #fff;
   text-decoration: none;
-  font-size: 0.9em;
+  font-size: 0.8em;
   transition: color 0.3s ease;
 }
 
@@ -167,7 +179,7 @@ margin-top: 70px;
 }
 
 .create-account a {
-  color: #007bff;
+  color: #2a91ff;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -270,7 +282,7 @@ header.open ~ .overlay {
   width: 100%;
   height: 750px;
   background-size: cover;
-  margin-bottom: 70px;
+  margin-bottom: 30px;
 }
 
 .splashscreen-home-harry {
@@ -278,7 +290,7 @@ header.open ~ .overlay {
   width: 100%;
   height: 750px;
   background-size: cover;
-  margin-bottom: 70px;
+  margin-bottom: 30px;
 }
 
 .hero {
@@ -459,6 +471,7 @@ footer {
   justify-content: center;
   text-align: center;
   bottom: 0;
+  /* margin-top: 60px; */
 }
 
 .footer-content {
@@ -614,140 +627,6 @@ footer .text-bottom {
   justify-content: center;
 }
 
-/* img {
-        display: block;
-        margin: 50px auto;
-        
-}
-		
-		h1 {
-			font-size: 36px;
-			margin-bottom: 20px;
-		}
-		
-		form {
-			max-width: 400px;
-			margin: 50px auto;
-			padding: 40px;
-			background-color: black;
-			border-radius: 5px;
-			box-shadow: 0 0 10px rgba(0,0,0,0.3);
-            border-top-left-radius:30px;
-            border-top-right-radius:30px;
-        
-		}
-		
-		label {
-			display: block;
-			margin-bottom: 10px;
-		}
-		
-		input[type="email"],
-		input[type="password"] {
-			width: 100%;
-			padding: 10px;
-			border-radius: 5px;
-			border: none;
-			margin-bottom: 20px;
-		}
-		
-		button[type="submit"] {
-			background-color: #e50914;
-			color: #fff;
-			padding: 10px;
-			border-radius: 5px;
-			border: none;
-			font-size: 16px;
-			cursor: pointer;
-		}
-		
-		a {
-			color: #fff;
-		}
-		
-		a:hover {
-			text-decoration: underline;
-		}
-		
-		.forgot-password {
-			margin-top: 20px;
-		}
-		
-		.create-account {
-			margin-top: 20px;
-			text-align: center;
-		}
-
-
-.product-info {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: black;
-}
-h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  font-weight: 1200px;
-  margin-bottom: 50px;
-}
-
-ul {
-  list-style: none;
-  margin: 20px;
-  padding: 0;
-}
-
-li {
-  margin-bottom: 10px;
-}
-.container {
- display: flex;
-  background-color: white;
-  color: black;
-  justify-content: space-evenly;
-  justify-content: center;
-  align-items: center;
-}
-
-.subscribe {
-  grid-column: 1 / -1;
-  justify-self: center;
-  align-self: center;
-  text-align: center;
-}
-.subscribe h2{
-    color: white;
-}
-.subscribe form{
-    background-color: gray;
-    width: 450px;
-    height: fit-content;
-    border-radius: 5px;
-    border-top-left-radius:30px;
-    border-top-right-radius:30px;
-    border-bottom-left-radius:30px;
-    border-bottom-right-radius:30px;
-    
-}
-form label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-form input {
-  display: block;
-  margin-bottom: 10px;
-}
-
-form h2 {
-  margin-bottom: 20px;
-  
-} */
-
 
  .swiper-slide {
   width: auto !important;
@@ -901,3 +780,91 @@ form h2 {
  .img{
   width: 450px;
  } 
+
+ /* ____________________genre-buttons_______________ */
+
+ .genre-buttons form{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 6px 27px;
+  gap: 46px;
+  cursor: pointer;
+  align-items: center;
+  background: #0B0B0B;
+  border: 2px solid rgba(255, 255, 255, 0.27);
+  border-radius: 89px;
+  width: fit-content;
+  color: #7e7e7e;
+}
+
+.genre-buttons form input[type="checkbox"]{
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.genre-buttons label{
+  font-size: 22px;
+}
+
+
+.genre-buttons form input[type="checkbox"]:checked+label {
+  box-shadow: 0;
+  color: #E50914;
+  transition: all .1s;
+}
+
+/* ------------------------channels-buttons------------------ */
+
+.channels-buttons form{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 6px 27px;
+  gap: 46px;
+  cursor: pointer;
+  align-items: center;
+  width: fit-content;
+  color: #7e7e7e;
+}
+
+.channels-buttons label{
+  font-size: 25px;
+}
+
+.channels-buttons form input[type="checkbox"]{
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.channels-buttons form input[type="checkbox"]:checked+label {
+  box-shadow: 0;
+  color: #E50914;
+  transition: all .1s;
+}
+
+.buttons-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom:50px ;
+}
+
+.swiper-container .section-heading span::before{
+    content: "";
+    display: inline-block;
+    margin-right: 10px;
+    width: 10px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: red;
+    transform: translateY(7px);
+}
+
+.swiper-container .section-heading{
+  margin-bottom: 16px;
+}
