@@ -27,6 +27,7 @@ document.addEventListener("click", function (event) {
 
 const toTop = document.querySelector(".to-top");
 
+
 window.addEventListener("scroll", () => {
   if (window.pageYOffset > 100) {
     toTop.classList.add("active");
@@ -34,6 +35,7 @@ window.addEventListener("scroll", () => {
     toTop.classList.remove("active");
   }
 });
+
 document.addEventListener("DOMContentLoaded", function () {
   new Swiper(".swiper-container", {
     slidesPerView: 6,
